@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale.1.0" />
+	<title>署名削除</title>
+<!-- 顧客提供向け -->
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./icons/bootstrap/font/bootstrap-icons.css">
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/edit.css">
+<!---->
+<!-- 開発向け
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/edit.css">
+<!---->
+</head>
+
+<body>
+<div class="container-fluid"><!-- BootStrap-Start -->
+
+<!-- ★▼▼▼ H1：ヘッダー情報 -->
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="title col-md-12">
+				<label class="label">お引渡しサイン</label>
+			</div>
+
+			<div class="col-12 container-fluid">
+				<!-- PC、タブレット向け -->
+				<div class="d-none d-md-block">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名削除</label></div>
+						<div class="col-4 col-md-1 btnlogout"><a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a></div>
+					</div>
+
+					<!-- ユーザ情報 -->
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+						<div class="row">
+							<div class="col login_data">
+								<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+								<label class="label" id="login_tensho">○○事業部□□課</label>
+								<label class="label" id="login_name">田中 太郎</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- スマホ向け -->
+				<div class="d-block d-md-none">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名削除</label></div>
+						<div class="col-auto col-md-auto ms-auto btnicon">
+							<i class="bi-list d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"></i>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+					</div>
+
+					<!-- オフキャンバスメニュー -->
+					<div class="offcanvas-md offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">ユーザ情報</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="row">
+								<!-- ユーザ情報 -->
+								<div class="col login_data_canvas">
+									<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+									<label class="label" id="login_tensho">○○事業部□□課</label>
+									<label class="label" id="login_name">田中 太郎</label>
+								</div>
+								<!-- ログアウト -->
+								<div class="col-2 ms-auto btnicon" align="right">
+									<a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- ★▲▲▲ H1：ヘッダー情報 -->
+<!-- ★▼▼▼ 顧客情報 -->
+<div class="F1">
+
+	<div class="font-size_bold col-md-12">顧客情報</div>
+
+	<!-- 顧客情報1：PC/タブレット -->
+	<div class="d-none d-md-block">
+		<p class="line-top">
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-10 d-block colhead font-color_data font-size_bold">車両：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XXXXX1</div>
+				</div>
+				<div class="col-10 d-block font-color_normal">
+					<div class="col-12 col-md-12">車両 200 に 12-34 / JNCMN21A4GU011490 / ドヨダ</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">設置先：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XX-XXXXXX</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">資料　太郎</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">受領日：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/07/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/05</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block font-color_normal">
+					<div class="col-12 col-md-12">法定3ヶ月点検</div>
+				</div>
+			</div>
+
+		</p>
+	</div>
+
+	<!-- 顧客情報2：PC/タブレット -->
+	<div class="d-none d-md-block">
+		<p class="line-top">
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-10 d-block colhead font-color_data font-size_bold">車両：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XXXXX5</div>
+				</div>
+				<div class="col-10 d-block font-color_normal">
+					<div class="col-12 col-md-12">車両 300 や 97-46 / JNCMN21A4GU011490 / ドヨダ</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">設置先：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XX-XXXXXX</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">顧客　一郎</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">受領日：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/07/31</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/05</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block font-color_normal">
+					<div class="col-12 col-md-12">法定2ヶ月点検</div>
+				</div>
+			</div>
+
+		</p>
+	</div>
+
+	<!-- 顧客情報1：スマホ -->
+	<div class="d-block d-md-none">
+		<p class="line-top">
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-12 col-md-2">XXXXX1</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-12 col-md-12">XX-XXXXXX</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">車両：</div>
+				<div class="col-12 col-md-12">車両 200 に 12-34 / JNCMN21A4GU011490 / ドヨダ</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-12 col-md-12">資料　太郎</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">設置先：</div>
+				<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-12 col-md-2">2024/07/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-12 col-md-2">2024/08/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受領日：</div>
+				<div class="col-12 col-md-2">2024/08/05</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+				<div class="col-12 col-md-12">法定3ヶ月点検</div>
+			</div>
+
+		</p>
+	</div>
+
+	<!-- 顧客情報2：スマホ -->
+	<div class="d-block d-md-none">
+		<p class="line-top">
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-12 col-md-2">XXXXX5</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-12 col-md-12">XX-XXXXXX</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">車両：</div>
+				<div class="col-12 col-md-12">車両 300 や 97-46 / JNCMN21A4GU011490 / ドヨダ</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-12 col-md-12">顧客　一郎</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">設置先：</div>
+				<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-12 col-md-2">2024/07/31</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-12 col-md-2">2024/08/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受領日：</div>
+				<div class="col-12 col-md-2">2024/08/05</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+				<div class="col-12 col-md-12">法定2ヶ月点検</div>
+			</div>
+
+		</p>
+	</div>
+	<p class="line-bottom font-size_large">上記、車両の受領を取消します。</p>
+
+</div>
+<!-- ★▲▲▲ 顧客情報 -->
+<!-- ★▼▼▼ F1：操作ボタン -->
+<div class="F1">
+
+	<!-- PC、タブレット向け -->
+	<div class="d-none d-md-block">
+		<div class="row">
+			<div class="control fixed-bottom">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-auto"><a href="#"><button class="btn btn-warning" type="button" id="trash">削除</button></a></div>
+				<div class="col-auto ms-auto"><a href="対象データ一覧.html"><button class="btn btn-danger" type="button" id="cancel">キャンセル</button></a></div>
+				<div class="col-1"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- スマホ向け -->
+	<div class="d-block d-md-none">
+		<div class="row">
+			<div class="control-xs fixed-bottom">
+				<div class="row">
+					<div class="col-6 btnicon"><a href="#"><i class="bi-trash3" id="trash"><p>削除</p></i></a></div>
+					<div class="col-6 btnicon"><a href="対象データ一覧.html"><i class="bi-x-square" id="cancel"><p>キャンセル</p></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/sign.js"></script>
+<!-- ★▲▲▲ F1：操作ボタン -->
+
+</div><!-- BootStrap-End -->
+</body>
+</html>

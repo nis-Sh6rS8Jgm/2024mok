@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale.1.0" />
+	<title>署名確認</title>
+<!-- 顧客提供向け -->
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./icons/bootstrap/font/bootstrap-icons.css">
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/edit.css">
+<!---->
+<!-- 開発向け
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/edit.css">
+<!---->
+</head>
+
+<body>
+<div class="container-fluid"><!-- BootStrap-Start -->
+
+<!-- ★▼▼▼ H1：ヘッダー情報 -->
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="title col-md-12">
+				<label class="label">お引渡しサイン</label>
+			</div>
+
+			<div class="col-12 container-fluid">
+				<!-- PC、タブレット向け -->
+				<div class="d-none d-md-block">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名確認</label></div>
+						<div class="col-4 col-md-1 btnlogout"><a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a></div>
+					</div>
+
+					<!-- ユーザ情報 -->
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+						<div class="row">
+							<div class="col login_data">
+								<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+								<label class="label" id="login_tensho">○○事業部□□課</label>
+								<label class="label" id="login_name">田中 太郎</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- スマホ向け -->
+				<div class="d-block d-md-none">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名確認</label></div>
+						<div class="col-auto col-md-auto ms-auto btnicon">
+							<i class="bi-list d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"></i>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+					</div>
+
+					<!-- オフキャンバスメニュー -->
+					<div class="offcanvas-md offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">ユーザ情報</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="row">
+								<!-- ユーザ情報 -->
+								<div class="col login_data_canvas">
+									<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+									<label class="label" id="login_tensho">○○事業部□□課</label>
+									<label class="label" id="login_name">田中 太郎</label>
+								</div>
+								<!-- ログアウト -->
+								<div class="col-2 ms-auto btnicon" align="right">
+									<a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- ★▲▲▲ H1：ヘッダー情報 -->
+<!-- ★▼▼▼ 顧客情報 -->
+<div class="F1">
+
+	<div class="font-size_bold col-md-12">顧客情報</div>
+
+	<!-- 顧客情報1：PC/タブレット -->
+	<div class="d-none d-md-block">
+		<p class="line-top">
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-10 d-block colhead font-color_data font-size_bold">車両：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XXXXX1</div>
+				</div>
+				<div class="col-10 d-block font-color_normal">
+					<div class="col-12 col-md-12">車両 200 に 12-34 / JNCMN21A4GU011490 / ドヨダ</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">設置先：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XX-XXXXXX</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">資料　太郎</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">受領日：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/07/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/05</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block font-color_normal">
+					<div class="col-12 col-md-12">法定3ヶ月点検</div>
+				</div>
+			</div>
+
+		</p>
+	</div>
+
+	<!-- 顧客情報1：スマホ -->
+	<div class="d-block d-md-none">
+		<p class="line-top">
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-12 col-md-2">XXXXX1</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-12 col-md-12">XX-XXXXXX</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">車両：</div>
+				<div class="col-12 col-md-12">車両 200 に 12-34 / JNCMN21A4GU011490 / ドヨダ</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-12 col-md-12">資料　太郎</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">設置先：</div>
+				<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-12 col-md-2">2024/07/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-12 col-md-2">2024/08/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受領日：</div>
+				<div class="col-12 col-md-2">2024/08/05</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+				<div class="col-12 col-md-12">法定3ヶ月点検</div>
+			</div>
+
+		</p>
+	</div>
+
+	<p class="line-bottom font-size_large">上記、車両を受領しました。</p>
+
+</div>
+<!-- ★▲▲▲ 顧客情報 -->
+<!-- ★▼▼▼ D2：署名欄 -->
+<div class="D2">
+
+	<!-- 署名あり -->
+	<div class="row">
+		<div class="col-12 col-md-12">
+			<canvas id="canvas" width="500" height="200" style="width: 500px; height : 200px; border:2px solid #000000; border-radius:7px;"></canvas>
+
+			<!-- 描画：署名 -->
+			<script>
+				window.onload = ()=>{
+					const canvas = document.querySelector("#canvas");
+					const ctx = canvas.getContext("2d");
+
+					const chara = new Image();
+					chara.src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAADICAYAAAAeGRPoAAAAAXNSR0IArs4c6QAAGTpJREFUeF7tnXvMPkdVx7+0QFtuLSC2YLlYEATaWrECwXgh3MQYDAJqBGMtBjShiiFICkEuipeWFP4oARJuCoTUlID+oUBBq9EgCiK0VMQKAq3YihSQWloB3ePv2b7zzm+f59nL7O7Mmc8kTd/f++7OzPmcs/vdnZ05cxtRIAABCEAAAhAonsBtircAAyAAAQhAAAIQEIJOEEAAAhCAAAQcEEDQHTgREyAAAQhAAAIIOjEAAQhAAAIQcEAAQXfgREyAAAQgAAEIIOjEAAQgAAEIQMABAQTdgRMxAQIQgAAEIICgEwMQgAAEIAABBwQQdAdOxAQIQAACEIAAgk4MQAACEIAABBwQQNAdOBETIAABCEAAAgg6MQABCEAAAhBwQABBd+BETIAABCAAAQgg6MQABCAAAQhAwAEBBN2BEzEBAhCAAAQggKATAxCAAAQgAAEHBBB0B07EBAhAAAIQgACCTgxAAAIQgAAEHBBA0B04ERMgAAEIQAACCDoxAAEIQAACEHBAAEF34ERMgAAEIAABCCDoxAAEIAABCEDAAQEE3YETMQECEIAABCCAoBMDEIAABCAAAQcEEHQHTsQECEAAAhCAAIJODEAAAhCAAAQcEEDQHTgREyAAAQhAAAIIOjEAAQhAAAIQcEAAQXfgREyAAAQgAAEIIOjEAAQgAAEIQMABAQTdgRMxAQIQgAAEIICgEwMQgAAEIAABBwQQdAdOxAQIQAACEIAAgk4MQAACEIAABBwQQNAdOBETIAABCEAAAgg6MQABCEAAAhBwQABBd+BETIAABCAAAQgg6MQABCAAAQhAwAEBBN2BEzEBAhCAAAQggKATAxCAAAQgAAEHBBB0B07EBAhAAAIQgACCTgxAAAIQgAAEHBBA0B04ERMgAAEIQAACCDoxAAEIQAACEHBAAEF34ERMgAAEIAABCCDoxAAEIAABCEDAAQEE3YETMQECEIAABCCAoBMDEIAABCAAAQcEEHQHTsQECEAAAhCAAIJODEAAAhCAAAQcEEDQHTgREyAAAQhAAAK1Cvrpkq7YuP8MSVcSChCAAAQgAIGSCdQq6N+S1Nr+v5KOKdmJ9B0CEIAABCBQq6CbiIelVg5cARCAAAQg4IRArUKGoDsJYMyAAAQgAIEjBBD0ujlwHUAAAhCAgBMCCDqC7iSUMQMCEIBA3QQQdAS97isA6yEAAQg4IYCgI+hOQhkzIAABCNRNAEFH0Ou+ArB+DgInSvrypuKTJH1ljkaoEwIQOEwAQUfQuSYgkJoAeR5SE6U+CPQggKAj6D3ChEMgMIgAy0IH4eJgCKQhgKAj6GkiiVogcEAAQScaILACAQQdQV8h7GjSOQEE3bmDMS9PArUKeviNzzxTK4c8o5JelU4AQS/dg/S/SAK1ChmCXmS40ulCCCDohTiKbvoigKCnHXK/o6TrJd1B0v9IukjSb0q60VfYYA0EdhJA0AkQCKxAoFZB/7qk4wLeuzjcX9KFkh4p6e6SbjdwiP6Zkt60gm9pEgJrEUDQ1yJPu1UTqFXQr5V0rx2C/m+S7pkoMh4n6f2J6qIaCJRAIBR0+/mYEjpNHyFQOoFaBf0SST8VCboNld8jkUPtgeDpkq6RdHWiOqkGAiUQOEfSm4OOXiHpzBI6Th8hUDqBWgX99pJuHuk8m1BnQ/ZfkPTfUR23lfRiSe8cWTenQaB0AjZ3xK6DttR6jyndj/S/QAI1XGxnSHrd5i3BJqsNGf77kqRLG/F+doG+pcsQWIPAHN/PbbKpPShbYZLpGl6lzSIIeBV02wziLiM9cF3zAHDKyHM5DQK1EwgF/RubSaRDmNxP0qejiadWZ3uvOk/SxUMq5FgI1ELAk6B/VdKdRzqOiTsjwXEaBAICH5L08ODf9i393AGEPtbje/u7JT15QJ0cCoFqCJQu6DdIsu0ZhxZ7cwi/8yHoQwlyPASOJrAvYdOzJP2qJHsLP37z1j30HvSCJs/DBcCHAASOJjD0YsqBoU1G6zskftNmydiTOjrO0pocvEkfcifwAUk/FD0AL9Fnm1z3SUn/IsmWmdr+6n8uyfpDgQAEOgiUIuh2UZ/W04OWlc2G3uPJOfHpCHpPoBxWDYEPSzqrmXh27MoWm3jfdeU+0DwEiiOQs6D/ZfM0/oM9idr38xN7Htsetm94cGB1HA6BIgncMmLiWkpD7cHaPoHZRNZUeSBS9o+6IFAMgRwFve/b+NSn+FjQbXmbJcGwYj9fWYwX6SgE+hOwVMZjkx2Z+NoDwDc7mrMloWEJczTYqNlfN9fXUyTZdUeBAARmIJCToNsbton0rmKT4O6WiEMs6OHSGCbJJYI8YzWXN99Uf7hn/a0QfVzSj2820Ol5qrvD4rjfZqAxswRKlvHwXR0HnR49ALcPw3Yo14+7sMGgEgjkJOjbvnnPdXOwYb5d3wof2qSHvaoEJ1bSxxc1E7N+K4GtQ5dSJWgyqyr+WdIDOnpk18NrJf1Kz97uejCwv639Hb6nGRwGAT8EchL0eAc0G9YLl5alpm5DgicEldqwoGWkCguinpr60fXZTnS/MH8zt7bAsifpFZKMg4m4LR8bU+LrNazD0iqPrXdMXzgHAhAYuA3oEsBMZO0hIxTaudr9nKR7B5Vbu11vHYj6XB44sq3sVDG3ERx7GGu/zdr/7WHQ/jNhsclWNi/D5kSw7CmtL7e9pdvmRN+RtilqgwAE9hHI6Q19X19T/v0Rkv4mqrBlUZuo2xC07ZBVSmlnRds65XhEpRQbPPWz63qx+Q2P9mQktkCgBAK1CnrX9/qQRU2i3neS1BLxvC93gL1xLzF6s4StntrommA6ZBMkTyywBQKrEUDQD9A/X9IrA0/YkG18U7pvk5vahuo9lVwE3bL6xUufPHH2bMtHJD0sMtCWx9kmKxQIQGAhAjUK+vMi4W5Rf1DSoyLuXaLukZm9+d5uoZhrm4k5euS6MNLVmuvaU2Gu1SmrGUnDEMidQI030W3L1a5vlu2c3OGwWNTHbAmZexys0b859s1eww7alGw+Q9eKFI8jWvgbAtkSqFHQt32ntWU4277Pxue8pBmOf3m2Xi2jYwh6GX7q08ttn214S+9Dj2MgkIgAgn4Acte693+S9MCIOcvZpgUhgj6NX05n75rMyFt6Tp6iL64J1Cbou5Zo7XubqGnm+xJBj6AvQXmZNuKdC8P7yr7rapke0goEKiBQm6DvmtHd58bT9f39UklPqyBWUpuIoKcmuk5910RJZP6g2fzlGdEKEd7S1/ENrVZGoDZB3zU02EfQLTy6RP27JdmwPKU/AQS9P6ucj+zahtjSvtoyxLb0vbZytpO+QSB7AjULensjChn05dEl6n3PzT4oFuoggr4Q6JmbiYfb29wN8eoQ1qXP7Aiqh0BNIhTvMvXCZu21bVIxRtAtcmJB4i1k2PXU9WY3rAaOXpvAX0n6gaATH5N0VvRmHvbRhuN/fu1O0z4EvBKoSdC73giniIqtu7X1t2FhjXr/KyXeraumWOxPKe8j47fw2IddiZkse5y9rVMgAIHEBGq6iXYNDe67Ie3DbW/49qYfFnaa2kftyN//XtL3BofWFIv9COV/VJ/PJl0TUW1XRTbWyd+/9LAwArXcRC0L3D0C39h2mg+QlOIt8ROSHhL5vSuNbGGhMXt34xGOCzZ7dM/eMA0kIWD7Hlga5bb8p6Rv21Jzl6jvyvuQpINUAoHaCNQi6NuG1uMc1GN5fK3jjYPNRvZfTeEb3i5B2F8TRyxN4JYo//+xwZ70XX2Jj7djmHeytNdozzWBsQJWGpRtQ4P2Pe87Ew37dn0vtKprYTwmJkK/2EOXiQKlDAJ9httjS7o2ceEaKcPf9LIAAjWIzTsk/UzgizBn+2WSHptI0K0aeyu3NbhxeY2k5xQQD0t3cduSp6X7QXvDCHyPpH8ITrHd+rrivqtWmwl/ZscfbLc/m1RKgQAERhKoQdB3zWRvl661+FLw+DNJj+7wx3HNBDobdqQcEBjzlge/9Ql8RdJdgm7Yw6o9tPYtF0n6tY6Dv1/Sh/tWwnEQgMBhAikELHemu0TDkmDYUHlbHinpQwkMijNlpXxgSNC9bKpA0LNxxaCOpPJbV+ZG0sQOcgUHQ+CAQG2C3jUJJ7ypvF7SLyUMkPiGZW/o9qZOOUIglTDAc1kCod+mzlbvEvUa7kvLeozWqiDg/cKxb3u3Dzz56o6hvvCG8hFJZyf0/J2apT3/FdX3r9FEvITNFVcVgl6cyxRnXLwkmqMyxqKuZW3e701jOHEOBHYS8H7R9BGM8JjrJJ2SOGZeJem5UZ1MkuMNPXGYLVbdlOyKuzrJm/piLqQhrwRqEvRta17DG8lcGaw+Jem7oiB6qKSrvAZWT7v6PHD1rIrDFiIw51LDOB5YyriQU2nGBwHPgm6Z4SxDXFtulGRD4HEJbyKWmz0cok/p5TgrndVdu6gj6CkjbP663iPpCUEzV0o6I2GzXZ+oSNDUDdgyLdo9xUPuhq7Rmb5hZefag19bbE7Hf0i6dMtKir71FnmcZ0GP073+pKR37RH0uTNXWaDF6TEfJMne4GssCHpZXo+3DZ7j/nEfSZ+NsHxekv2eckCgK/MefA4T+FlJloekmjLHBZkLvL7f+pZObvLvkk6OIA1dx5sL46n9QNCnElz2/KX8ZVuwfjQyzR7G7aGccoTAtrX88DkgYLkS4knJrvl4FvS+N5+lBd0CqkvUr5V0qutoO9q4vj6qDEuW5r6sGdr8jaBnc+fet+yO8dvVS5tUytYPyhECj2q2on2rJPucOFexJEJzli9OrNzum2G5epPF8PKJ9RZ5ei2CvmtyzRqCbsFiM+q/PYqauYf8cwtSBD03j2zvT5zW2HYrtF0L5ywm4C+JGqhuGHVOwNTti4BXQX+vpMcHrrJ0rI/Z4rq+Q/NzeP6Pmn3BnxRV/FVJJ87RWIZ1ThX0e0qy/efDYp8zwsmQGZpdZJem+mqs0X8ryVLChqX2yaRjWXKecwJeBX3I5B2b2W4zRtuyNBOb7GNvOmEfapkoN1UkuhKSmB/fF83Gdn4Zz26ebaZim6q0ZemZ512TSRH12d1OA6URWFq8luIzRCjsG8y9VhT0tumwz/aGGU+cW4rdku0M8VNXv2zilE2g6iqsYU7nSftefregOvuObcPhSxaWfS5Jm7aKJOBR0H9b0vmBN/Z9l35esz79lcHxD25SWX5yBW/G20ra7My3bGyZc9LLCqbe2uRUQbeKLAvfhZJsox37Ly6faNaknr6mkQ7aXvOzVIjva42v7xjxvL+kTztgjAkQmEzAo6DHN59fbtK5vm4PqVBYPriZPToZ7ogKuhIsPLNZg/umEXWVcEoKQQ/ttK03v2+L4fYt9hElQMmsj8+SZJsWtcU+Z9ne5WsVe9CNE0Qh6mt5g3azIuBR0MeIRHjOtoxySzjONod5WNSQTe67bInGV2gjfPjaN5LSt3snSbphx8F/J+nhfSvjuP/PRhbuEGi7EYYCvwYimzh656hhRH0NT9BmVgS8CbrlYj8hINx3Z7M581MPdfjvSDptsy/7H0uydZVei6VpDIfJU8ZjPDEyZsgbe7+oWmtZ577e2fpoSxwSFkR9HzX+7ppAyhtoDqDGvJ1bv3O9aeXAdM4+xG9/qePRHhasjV1DxPY5xj7LUI4mYPMPHhL8+h+jf6/NDFFf2wO0nxWB1DfQNY2Lh6uHfOvLZdLPmvzWaDvOtz9XPJqw24SqcPQmtNdEf9vf1uCSS5slXBd8U88lWujH6gTmuoGuYVh887GkI5ZitU9Zey16nz56PMa+Z58dGDZ3PO4TdvKFHzjjHElvDnxzs6TjJwSh5Vmw68xGw2xHQ3vgTlUQ9VQkqadoAnPfQJeEM2XYPJe16EvyyqGteInhUvFowv6FjtS7xsTiyJYx/noOgFbsQ/w5pM9qkV3dnfttnyVtKwYLTedBYKkb6BLWhoI+dF/z50u6IOjk3SV9aYlOV96GvanZm19b7texdeaciGxGvCVN6Vq/bu3apD0bRfiJCtPJTnlA7vKZpei1UbOukuo+ZCtU7hA1wES5Oa8g6s6KQKoLKQejwhuQJZqwC3lICc//C0k/MuRkjh1NIOT+Rkm/OLqm8Sd+eU/+fBt6Pnd89cWdeUWUjCfVZLhte3innMMQr3Qx+KSJLS4E6fAYAl4E3WYqPzsA8HOS3jYQSCgsNnwXr3MdWB2H9yQQcr9qc/PteWrSw+wt3T69nNJR6wuiEZykDWdY2ZzD410pXFPlIGhRkiY2w6CiS/MT8CLoca7pMXbltBZ9fs/n00LI3d6U77py10zYP7DZLOedkuxt1f5dSzlD0scDY1O+PbfV/rSkt0s6dvOL1IJu1SLqtUQsdt5KYIzw5YhvyO5q2/qf+pthjpxy7FPI3YZkw6xkOfbXe5+uiyYL2l4HF81g9BskWVrjtth8BXuQiDMlTmm6a/idb+pTiHJu1gS8CPrYhDKhc1LUkbWzM+0cIyN5OWbJ66Ar1fHFzUTF8xIiYfZ7QphUlTcBj4I+dtvMJW9keUfFsr2bI5/7shb4ae2FTVa9VwTmXCPp3jOb9ydNmuMnBm3YVsa2pDBlYaJcSprUlS0BD4L+mWabUVvu1BZbP2zbaQ4tCPpQYmmOD/O5j30YS9MTaomFb6n7w30lPVnSq2d0AaI+I1yqzoPAUhfsnNammpGLoM/ppe11I+jrcO9q1fvnDybK5RNr9GQGAh4EPdVkNgR9hgDrUSWC3gPSAoe8T9Ljgnb+UJLNRvdWur6p2wjB57wZij31EfAg6Km+wSLo68Q/gr4O97jVOOmLh3vDNrKxqFsMWq55CgSKJuDhoo2H3J8j6TUjvIKgj4CW4JRwySE31gRAR1YRCvrQ1Mkjm1z1tHj4/UGSPrVqj2gcAhMJeBR0mzH7nhFcEPQR0BKcEu50N2TL2wRNU0VA4KZgN7U5ksnkCDu+5q2PFo9nSbKshRQIFEWgdEG32e02y70tUzJOIejrhC6Cvg73uNUaBf2LkmwjprhcL+nkPNxCLyDQn0Dpgv7RzdN0a7GJ+2n9zT90JII+EtzE0xD0iQATnW6Twto155+XdJ9E9eZeTddyNovJUyvcYS93X9G/PQRKF/TwrcJMnWIPgr7O5YKgr8M9bvUZzQ6Fb9380n62XOu1lEskPTXaRvf3JZ1TCwDs9EFgigDmQCCc2DI1DziCvo5HEfR1uHe1+kBJNsn06ny6tFhP4tzyCPpi6GkoFYHSBf2GJrvUSRsYU3fqQtBTRdWwesKHspuDiVnDauFoCEwn8HJJL95UY2vy3z+9SmqAwHIEShf0P5X0oxtc9vOPTUCHoE+AN+HUGidjTcDFqTMTqHmUYma0VD83gdIF3ficL8mWO43J3x7yRdDnjrbu+m1k5cTNn2z4/fc2G4TYmzsFAhCAAAR6EvAg6D1N3XsYgr4X0SwHhILeNjA2OdAsHaRSCEAAAiUQQNAPvISgrxOx8W55NinrbEm2JJECAQhAAAI9CSDoCHrPUJntsHh28e9uPqPM1iAVQwACEPBIAEFH0HOI63MlnSnp8iZR0Ltz6BB9gAAEIFAaAQQdQS8tZukvBCAAAQh0EEDQEXQuDAhAAAIQcEAAQUfQHYQxJkAAAhCAAIKOoHMVQAACEICAAwII+oETbblUyAM2DgIcEyAAAQjUQgDROvB0uEmI/RY2tVwF2AkBCEDAAQFE68CJn432gL6TpBsd+BgTIAABCECgAgII+oGTn9vkFH9V4PPzJF1cQQxgIgQgAAEIOCCAoB92Ypj+9VpJpzrwMSZAAAIQgEAFBBD07YJ+i6TjKogBTIQABCAAAQcEEPTtgm5v68c48DEmQAACEIBABQQQ9MNODpeuIegVXACYCAEIQMALAQT9sCe/GbyVm7gf68XR2AEBCEAAAr4JIOgIuu8IxzoIQAAClRBA0A87+iZJx29+9XVJJ1QSB5gJAQhAAAKFE0DQDzvwMkmP3fzKfn584f6l+xCAAAQgUAkBBP1oR58v6RuSLqwkBjATAhCAAAQcEEDQHTgREyAAAQhAAAIIOjEAAQhAAAIQcEAAQXfgREyAAAQgAAEIIOjEAAQgAAEIQMABAQTdgRMxAQIQgAAEIICgEwMQgAAEIAABBwQQdAdOxAQIQAACEIAAgk4MQAACEIAABBwQQNAdOBETIAABCEAAAgg6MQABCEAAAhBwQABBd+BETIAABCAAAQgg6MQABCAAAQhAwAEBBN2BEzEBAhCAAAQggKATAxCAAAQgAAEHBBB0B07EBAhAAAIQgACCTgxAAAIQgAAEHBBA0B04ERMgAAEIQAACCDoxAAEIQAACEHBAAEF34ERMgAAEIAABCCDoxAAEIAABCEDAAQEE3YETMQECEIAABCCAoBMDEIAABCAAAQcEEHQHTsQECEAAAhCAAIJODEAAAhCAAAQcEEDQHTgREyAAAQhAAAIIOjEAAQhAAAIQcEAAQXfgREyAAAQgAAEIIOjEAAQgAAEIQMABAQTdgRMxAQIQgAAEIICgEwMQgAAEIAABBwQQdAdOxAQIQAACEIAAgk4MQAACEIAABBwQQNAdOBETIAABCEAAAgg6MQABCEAAAhBwQABBd+BETIAABCAAAQj8H+KcNPZHMmFsAAAAAElFTkSuQmCC"
+					chara.onload = () => {
+						ctx.drawImage(chara, 0, 0);
+					};
+				};
+			</script>
+		</div>
+	</div>
+
+</div>
+<!-- ★▲▲▲ D2：署名欄 -->
+<!-- ★▼▼▼ F1：操作ボタン -->
+<div class="F1">
+
+	<!-- PC、タブレット向け -->
+	<div class="d-none d-md-block">
+		<div class="row">
+			<div class="control fixed-bottom">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-auto ms-auto"><a href="対象データ一覧.html"><button class="btn btn-danger" type="button" id="close">閉じる</button></a></div>
+				<div class="col-1"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- スマホ向け -->
+	<div class="d-block d-md-none">
+		<div class="row">
+			<div class="control-xs fixed-bottom">
+				<div class="row">
+					<div class="col-6 ms-auto btnicon"><a href="対象データ一覧.html"><i class="bi-x-square" id="close"><p>閉じる</p></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- ★▲▲▲ F1：操作ボタン -->
+
+</div><!-- BootStrap-End -->
+</body>
+</html>

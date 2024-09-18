@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* 書式設定：フォント */
+.font-color_normal{
+	color:#000000
+}
+
+.font-color_data{
+	color:#0000ff
+}
+
+.font-color_warning{
+	color:#ff0000 
+}
+
+.font-size_bold {
+  font-weight: bold;
+}
+
+.font-size_large {
+  font-size: 18px;
+}
+
+/* 罫線 */
+.line-top{
+	border-top:1px solid #000000;
+}
+
+.line-bottom{
+	border-bottom:1px solid #000000;
+}
+
+.line-right{
+	border-right:1px solid #000000;
+}
+
+.line-left{
+	border-left:1px solid #000000;
+}
+

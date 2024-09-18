@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/* 共通設定 */
+body {
+    padding-bottom: 5rem;
+}
+
+
+/* ヘッダ部 */
+header {
+  width: 100%;
+  background-color: #FFFFCC;
+}
+
+header .title {
+  height: 25px;
+  width: 100%;
+  background-color: #FFCC99;
+}
+
+.display-id {
+	position: relative;
+}
+
+.display-id label{
+    position: absolute;
+    bottom: 5px;
+	color: #595959;
+	font-size: 12px;
+  font-weight: bold;
+}
+
+#title-area {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	display: table;
+}
+
+#title-area>label {
+	color: #595959;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 50%;
+}
+
+.login_data {
+  color: #595959;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.login_data>label {
+  display: block;
+}
+
+.login_data_canvas {
+  color: #595959;
+  font-weight: bold;
+  text-align: left;
+}
+
+.login_data_canvas>label {
+  display: block;
+}
+
+.divider {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-style: solid;
+    border-color: #dee2e6;
+    border-width: 1px;
+}
+
+/* エリア */
+.D1 {
+    padding-top: 1rem;
+}
+
+.D2 {
+    padding-top: 1rem;
+}
+
+.D3 {
+    padding-top: 1rem;
+}
+
+.D4 {
+    padding-top: 1rem;
+}
+
+
+/* その他 */
+.colhead {
+/*    margin: 0.1em;*/
+    background-color: #D7EEFF;
+    overflow-wrap : break-word;
+}
+
+.colitem {
+/*    margin: 0.1em;*/
+    overflow-wrap : break-word;
+}
+
+.control {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background-color: #FFFFCC;
+}
+.control-xs {
+    padding-top: 0.5rem;
+    background-color: #FFFFCC;
+}
+
+.btnicon {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.btnicon p {
+    font-size: 8pt;
+}
+
+.btnicon a {
+    color: inherit;
+}
+
+.paging {
+    padding-top: 1rem;
+}
+
+.btnarea {
+    padding-top: 1rem;
+    text-align: right;
+}
+
+
+.btnlogout {
+    text-align: center;
+    font-size: 1rem;
+    /*
+    background-color: lightgray;
+    */
+}
+
+.btnlogout p {
+    font-size: 8pt;
+}
+
+.btnlogout a {
+    color: inherit;
+}
+

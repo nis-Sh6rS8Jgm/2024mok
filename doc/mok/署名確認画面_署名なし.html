@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale.1.0" />
+	<title>署名確認</title>
+<!-- 顧客提供向け -->
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./icons/bootstrap/font/bootstrap-icons.css">
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/edit.css">
+<!---->
+<!-- 開発向け
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/common.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/edit.css">
+<!---->
+</head>
+
+<body>
+<div class="container-fluid"><!-- BootStrap-Start -->
+
+<!-- ★▼▼▼ H1：ヘッダー情報 -->
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="title col-md-12">
+				<label class="label">お引渡しサイン</label>
+			</div>
+
+			<div class="col-12 container-fluid">
+				<!-- PC、タブレット向け -->
+				<div class="d-none d-md-block">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名確認</label></div>
+						<div class="col-4 col-md-1 btnlogout"><a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a></div>
+					</div>
+
+					<!-- ユーザ情報 -->
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+						<div class="row">
+							<div class="col login_data">
+								<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+								<label class="label" id="login_tensho">○○事業部□□課</label>
+								<label class="label" id="login_name">田中 太郎</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- スマホ向け -->
+				<div class="d-block d-md-none">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>署名確認</label></div>
+						<div class="col-auto col-md-auto ms-auto btnicon">
+							<i class="bi-list d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"></i>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+					</div>
+
+					<!-- オフキャンバスメニュー -->
+					<div class="offcanvas-md offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">ユーザ情報</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="row">
+								<!-- ユーザ情報 -->
+								<div class="col login_data_canvas">
+									<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+									<label class="label" id="login_tensho">○○事業部□□課</label>
+									<label class="label" id="login_name">田中 太郎</label>
+								</div>
+								<!-- ログアウト -->
+								<div class="col-2 ms-auto btnicon" align="right">
+									<a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- ★▲▲▲ H1：ヘッダー情報 -->
+<!-- ★▼▼▼ 顧客情報 -->
+<div class="F1">
+
+	<div class="font-size_bold col-md-12">顧客情報</div>
+
+	<!-- 顧客情報1：PC/タブレット -->
+	<div class="d-none d-md-block">
+		<p class="line-top">
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-10 d-block colhead font-color_data font-size_bold">車両：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XXXXX6</div>
+				</div>
+				<div class="col-10 d-block font-color_normal">
+					<div class="col-12 col-md-12">試験市 123 ほ 85-21 / JNCMN21A4GU011490 / ドヨダ</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">設置先：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">XX-XXXXXX</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">客野　様太郎</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-5 d-block colhead font-color_data font-size_bold">受領日：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-2 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/07/01</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/04</div>
+				</div>
+				<div class="col-5 d-block font-color_normal">
+					<div class="col-12 col-md-12">2024/08/05</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block font-color_normal">
+					<div class="col-12 col-md-12">法定3ヶ月点検</div>
+				</div>
+			</div>
+
+		</p>
+	</div>
+
+	<!-- 顧客情報1：スマホ -->
+	<div class="d-block d-md-none">
+		<p class="line-top">
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注ID：</div>
+				<div class="col-12 col-md-2">XXXXX6</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受注番号：</div>
+				<div class="col-12 col-md-12">XX-XXXXXX</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">車両：</div>
+				<div class="col-12 col-md-12">試験市 123 ほ 85-21 / JNCMN21A4GU011490 / ドヨダ</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">請求先：</div>
+				<div class="col-12 col-md-12">客野　様太郎</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">設置先：</div>
+				<div class="col-12 col-md-12">N○×△株式会社　満月支店</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">入庫日：</div>
+				<div class="col-12 col-md-2">2024/07/01</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">出庫日：</div>
+				<div class="col-12 col-md-2">2024/08/04</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">受領日：</div>
+				<div class="col-12 col-md-2">2024/08/05</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 d-block colhead font-color_data font-size_bold">作業内容：</div>
+				<div class="col-12 col-md-12">法定3ヶ月点検</div>
+			</div>
+
+		</p>
+	</div>
+
+	<p class="line-bottom font-size_large">上記、車両を受領しました。</p>
+
+</div>
+<!-- ★▲▲▲ 顧客情報 -->
+<!-- ★▼▼▼ D2：署名欄 -->
+<div class="D2">
+
+	<div class="row">
+		<div class="col-12 col-md-12">
+			<label class="form-check-label" for="flexRadio2">署名なし理由</label>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 col-md-12 mb-3 font-color_warning">お客様不在のため</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 mb-3">
+			<label class="form-label">添付画像（不在証明等）</label>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-11 border">
+			<img class="img-fluid" id="absenceimg1" />
+		</div>
+	</div>
+	<!-- 不在証明画像読込（非同期APIを想定） -->
+	<script>
+		window.addEventListener('DOMContentLoaded', function(){
+			const absenceimg1 = document.querySelector("#absenceimg1");
+			absenceimg1.src="data:image/png;base64,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45v8Dzt+5TatdKM1HVrpZe24QyvdaE2HVoK/0pZPYP9X5MsE+EPICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwBI5AQAiZwAIJETACRyAoBETgCQ/Lk5AcAfov1qfoH/+wOQyAkAEjkBQCInAEjkBACJnAAgkRMAJHICgEROAJDICQASOQFAIicASOQEAImcACCREwAkcgKARE4AkMgJABI5AUAiJwC49++//wOvATdfu6kQBQAAAABJRU5ErkJggg=="
+		});
+	</script>
+
+</div>
+<!-- ★▲▲▲ D2：署名欄 -->
+<!-- ★▼▼▼ F1：操作ボタン -->
+<div class="F1">
+
+	<!-- PC、タブレット向け -->
+	<div class="d-none d-md-block">
+		<div class="row">
+			<div class="control fixed-bottom">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-auto ms-auto"><a href="#"><button class="btn btn-danger" type="close" id="close">閉じる</button></a></div>
+				<div class="col-1"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- スマホ向け -->
+	<div class="d-block d-md-none">
+		<div class="row">
+			<div class="control-xs fixed-bottom">
+				<div class="row">
+					<div class="col-6 ms-auto btnicon"><a href="対象データ一覧.html"><i class="bi-x-square" id="close"><p>閉じる</p></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- ★▲▲▲ F1：操作ボタン -->
+
+</div><!-- BootStrap-End -->
+</body>
+</html>
