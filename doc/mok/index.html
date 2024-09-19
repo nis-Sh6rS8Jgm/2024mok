@@ -1,1 +1,564 @@
-mokxx
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale.1.0" />
+	<title>対象データ一覧</title>
+<!-- 顧客提供向け -->
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./icons/bootstrap/font/bootstrap-icons.css">
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="./css/common.css">
+<!---->
+<!-- 開発向け
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" type="text/css; charset=utf-8" media="all" href="css/common.css">
+<!---->
+</head>
+
+<body>
+<div class="container-fluid"><!-- BootStrap-Start -->
+
+
+<!-- ★▼▼▼ H1：ヘッダー情報 -->
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="title col-md-12">
+				<label class="label">お引渡しサイン</label>
+			</div>
+
+			<div class="col-12 container-fluid">
+				<!-- PC、タブレット向け -->
+				<div class="d-none d-md-block">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>対象データ一覧</label></div>
+						<div class="col-4 col-md-1 btnlogout"><a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a></div>
+					</div>
+
+					<!-- ユーザ情報 -->
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+						<div class="row">
+							<div class="col login_data">
+								<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+								<label class="label" id="login_tensho">○○事業部□□課</label>
+								<label class="label" id="login_name">田中 太郎</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- スマホ向け -->
+				<div class="d-block d-md-none">
+					<div class="row header-body">
+						<div class="col-4 col-md-1"></div>
+						<div class="col-4 col-md-10" id="title-area"><label>対象データ一覧</label></div>
+						<div class="col-auto col-md-auto ms-auto btnicon">
+							<i class="bi-list d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive"></i>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col display-id"><label>XXXXXX01</label></div>
+					</div>
+
+					<!-- オフキャンバスメニュー -->
+					<div class="offcanvas-md offcanvas-end" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">ユーザ情報</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<div class="row">
+								<!-- ユーザ情報 -->
+								<div class="col login_data_canvas">
+									<label class="label" id="login_date">2024/09/03(火) 09:42:44</label>
+									<label class="label" id="login_tensho">○○事業部□□課</label>
+									<label class="label" id="login_name">田中 太郎</label>
+								</div>
+								<!-- ログアウト -->
+								<div class="col-2 ms-auto btnicon" align="right">
+									<a href="#"><i class="bi-box-arrow-right"><p>ログアウト</p></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- ★▲▲▲ H1：ヘッダー情報 -->
+
+<!-- ★▼▼▼ 検索条件 -->
+<div class="D1">
+
+	<!-- 検索条件（PC、タブレット向け） -->
+	<div class="d-none d-md-block">
+	</div>
+
+
+	<!-- 検索条件 -->
+	<!-- 絞り込みボタン（スマホ向け） -->
+	<div class="d-block d-md-none">
+		<button class="col-12 btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive-search" aria-controls="offcanvasResponsive-search">検索条件を変更する</button>
+	</div>
+
+	<div class="offcanvas-md offcanvas-end" tabindex="-1" id="offcanvasResponsive-search" aria-labelledby="offcanvasResponsiveLabel">
+		<div class="offcanvas-header">
+			<h5 class="offcanvas-title" id="offcanvasResponsiveLabel">検索条件</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive-search" aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+<div class="row">
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-12 col-md-1">受注ID</div>
+				<div class="col-12 col-md-2"><input class="form-control" type="text" placeholder="例）2288221" aria-label="default input example"></div>
+
+				<div class="col-md-1"></div>
+				<div class="col-12 col-md-1">受注番号</div>
+				<div class="col-12 col-md-2"><input class="form-control" type="text" placeholder="例）24308-00003A" aria-label="default input example"></div>
+
+				<div class="col-md-1"></div>
+				<div class="col-12 col-md-1">車両</div>
+				<div class="col-12 col-md-2"><input class="form-control" type="text" placeholder="例）車両 200 に 12-34" aria-label="default input example"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-12 col-md-1">請求先</div>
+				<div class="col-12 col-md-3"><input class="form-control" type="text" placeholder="例）株式会社○×△" aria-label="default input example"></div>
+
+				<div class="col-12 col-md-1">設置先</div>
+				<div class="col-12 col-md-3"><input class="form-control" type="text" placeholder="例）株式会社○×△" aria-label="default input example"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-12 col-md-1">拠点</div>
+				<div class="col-12 col-md-3">
+					<select class="form-select" aria-label="Default select example">
+						<option value="0">全拠点</option>
+						<option value="1" selected="">AAAAAA</option>
+						<option value="2">BBBBBB</option>
+						<option value="3">CCCCCC</option>
+					</select>
+				</div>
+
+				<div class="col-12 col-md-1">引渡日確定</div>
+				<div class="col-12 col-md-3">
+					<select class="form-select" aria-label="Default select example">
+						<option value="" selected="">--未指定--</option>
+						<option value="1">署名あり</option>
+						<option value="2">通知済み（署名なし（事由あり））</option>
+						<option value="3">署名なし</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="btnarea">
+					<div class="col-md-11"></div>
+					<button class="col-12 col-md-1 btn btn-primary">検索</button>
+				</div>
+			</div>
+
+</div>
+
+
+		</div>
+	</div>
+
+</div><!-- D1 -->
+<!-- ★▲▲▲ 検索条件 -->
+
+<div class="row divider"></div>
+
+<div class="D2">
+
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-12 col-md-1">受領日</div>
+		<div class="col-12 col-md-2"><input class="form-control" type="date" placeholder="例）2288221" aria-label="default input example"></div>
+	</div>
+
+</div><!-- D2 -->
+
+<div class="row divider"></div>
+
+<!-- ★▼▼▼ 検索結果 -->
+<div class="D3">
+	<!-- ヘッダ行（PC、タブレット向け） -->
+	<div class="d-none d-md-block">
+		<div class="row border-top border-bottom">
+			<div class="col-md-1 colhead">
+				<div class="col-12">&nbsp;</div>
+			</div>
+			<div class="col-md-11 colhead">
+				<div class="row">
+					<div class="col-md-1">受注ID</div>
+					<div class="col-md-1">受注番号</div>
+					<div class="col-md-1">車両</div>
+					<div class="col-md-2">請求先</div>
+					<div class="col-md-2">設置先</div>
+					<div class="col-md-1">入庫日</div>
+					<div class="col-md-1">出庫日</div>
+					<div class="col-md-2">作業内容</div>
+					<div class="col-md-1">署名</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 明細行（共通） -->
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-check-square">署名あり</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-send-check">通知済み</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ★▼▼▼ 明細４～１０ -->
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-check-square">署名あり</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-send-check">通知済み</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-check-square">署名あり</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon"><a href="#"><i class="bi-send-check">通知済み</i></a></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row border-top border-bottom">
+		<div class="col-2 col-md-1 align-self-center">
+			<div class="text-center"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."></div>
+		</div>
+		<div class="col-9 col-md-11">
+			<div class="row">
+				<div class="col-6 d-block d-md-none colhead">受注ID</div>
+				<div class="col-6 d-block d-md-none colhead">受注番号</div>
+				<div class="col-6 col-md-1 colitem">XXXXX1</div>
+				<div class="col-6 col-md-1 colitem">XX-XXXXXX</div>
+				<div class="col-12 d-block d-md-none colhead">車両</div>
+				<div class="col-12 col-md-1 colitem">車両 200 に 12-34</div>
+				<div class="col-12 d-block d-md-none colhead">請求先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-12 d-block d-md-none colhead">設置先</div>
+				<div class="col-12 col-md-2">○×△株式会社</div>
+				<div class="col-6 d-block d-md-none colhead">入庫日</div>
+				<div class="col-6 d-block d-md-none colhead">出庫日</div>
+				<div class="col-6 col-md-1 colitem">2024/07/17</div>
+				<div class="col-6 col-md-1 colitem">2024/08/01</div>
+				<div class="col-12 d-block d-md-none colhead">作業内容</div>
+				<div class="col-12 col-md-2">法定3ヶ月点検</div>
+				<div class="col-12 d-block d-md-none colhead">引渡日確定</div>
+				<div class="col-md-1 icon">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+
+<!-- ★▲▲▲ 明細４～１０ -->
+
+
+<!-- ★▼▼▼ ページング -->
+	<div class="paging">
+	<nav aria-label="Page navigation example">
+	  <ul class="pagination justify-content-end">
+	    <li class="page-item disabled">
+	      <a class="page-link">Previous</a>
+	    </li>
+	    <li class="page-item"><a class="page-link" href="#">1</a></li>
+	    <li class="page-item"><a class="page-link" href="#">2</a></li>
+	    <li class="page-item"><a class="page-link" href="#">3</a></li>
+	    <li class="page-item">
+	      <a class="page-link" href="#">Next</a>
+	    </li>
+	  </ul>
+	</nav>
+	</div>
+<!-- ★▲▲▲ ページング -->
+</div><!-- D3 -->
+<!-- ★▲▲▲ 検索結果 -->
+
+<!-- ★▼▼▼ 操作ボタン -->
+<div class="D4">
+	<!-- PC、タブレット向け -->
+	<div class="d-none d-md-block">
+		<div class="row">
+			<div class="control fixed-bottom">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-auto"><button class="btn btn-primary">署名入力</button></div>
+				<div class="col-auto"><button class="btn btn-primary">署名削除</button></div>
+				<div class="col-auto ms-auto"><button class="btn btn-primary">CSV出力</button></div>
+				<div class="col-auto"><button class="btn btn-primary">PDF出力</button></div>
+				<div class="col-1"></div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- スマホ向け -->
+	<div class="d-block d-md-none">
+		<div class="row">
+			<div class="control-xs fixed-bottom">
+				<div class="row">
+					<div class="col-3 btnicon"><a href="#"><i class="bi-pencil-square"><p>署名入力</p></i></a></div>
+					<div class="col-3 btnicon"><a href="#"><i class="bi-eraser"><p>署名削除</p></i></a></div>
+					<div class="col-3 btnicon"><a href="#"><i class="bi-filetype-csv"><p>CSV出力</p></i></a></div>
+					<div class="col-3 btnicon"><a href="#"><i class="bi-filetype-pdf"><p>PDF出力</p></i></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- D4 -->
+<!-- ★▲▲▲ 操作ボタン -->
+
+</div><!-- BootStrap-End -->
+</body>
+
+</html>
