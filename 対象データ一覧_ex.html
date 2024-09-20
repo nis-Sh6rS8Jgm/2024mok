@@ -365,12 +365,10 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    // PDF出力ボタンのイベントハンドラ
-    $('.btn-primary:contains("PDF出力")').click(function() {
+    $('.btn-primary:contains("PDF出力")').on('click touchstart', function() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        // テーブルデータを取得
         let rows = [];
         $('#dataRows .row').each(function() {
             let row = [];
@@ -380,27 +378,22 @@ $(document).ready(function() {
             rows.push(row);
         });
 
-        // PDFにテーブルデータを追加
         doc.autoTable({
             head: [['受注ID', '受注番号', '車両', '請求先', '設置先', '入庫日', '出庫日', '作業内容']],
             body: rows
         });
 
-        // 日付と時間を取得
         const now = new Date();
         const formattedDate = now.toISOString().slice(0, 10).replace(/-/g, '');
         const formattedTime = now.toTimeString().slice(0, 8).replace(/:/g, '');
 
-        // PDFを保存
         doc.save(`sample_${formattedDate}_${formattedTime}.pdf`);
     });
 
-    // CSV出力ボタンのイベントハンドラ
-    $('.btn-primary:contains("CSV出力")').click(function() {
+    $('.btn-primary:contains("CSV出力")').on('click touchstart', function() {
         let csvContent = "data:text/csv;charset=utf-8,";
         csvContent += "受注ID,受注番号,車両,請求先,設置先,入庫日,出庫日,作業内容\n";
 
-        // テーブルデータを取得
         $('#dataRows .row').each(function() {
             let row = [];
             $(this).find('.colitem').each(function() {
@@ -409,12 +402,10 @@ $(document).ready(function() {
             csvContent += row.join(",") + "\n";
         });
 
-        // 日付と時間を取得
         const now = new Date();
         const formattedDate = now.toISOString().slice(0, 10).replace(/-/g, '');
         const formattedTime = now.toTimeString().slice(0, 8).replace(/:/g, '');
 
-        // CSVをダウンロード
         const encodedUri = encodeURI(csvContent);
         const link = document.createElement("a");
         link.setAttribute("href", encodedUri);
