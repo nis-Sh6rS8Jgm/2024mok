@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -34,15 +33,6 @@
         a:hover {
             text-decoration: underline;
         }
-        .toggle-buttons {
-            margin-bottom: 20px;
-        }
-        .toggle-buttons button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
         .status {
             margin-bottom: 20px;
             font-size: 18px;
@@ -55,15 +45,15 @@
             font-size: 16px;
             cursor: pointer;
         }
+        .date-time {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
     <h1>テスト用画面</h1>
-    <div class="toggle-buttons">
-        <button onclick="showPCView()">PC表示</button>
-        <button onclick="showMobileView()">スマホ表示</button>
-    </div>
-    <div class="status" id="status">PC表示中</div>
+    <div class="date-time" id="date-time"></div>
     <ul id="page-list">
         <li><a href="署名確認画面_署名あり.html">署名確認画面（署名あり）</a></li>
         <li><a href="署名確認画面_署名なし.html">署名確認画面（署名なし）</a></li>
@@ -71,29 +61,23 @@
         <li><a href="署名入力画面.html">署名入力画面</a></li>
         <li><a href="対象データ一覧.html">対象データ一覧</a></li>
     </ul>
-    <button class="screenshot-button" onclick="takeScreenshot()">スクリーンショット</button>
 
     <script>
-        function showPCView() {
-            document.body.style.width = '100%';
-            document.body.style.height = '100vh';
-            document.body.style.overflow = 'auto';
-            document.body.style.backgroundColor = '#f0f0f0';
-            document.getElementById('status').innerText = 'PC表示中';
+        function updateDateTime() {
+            const now = new Date();
+            const formattedDateTime = now.toLocaleString('ja-JP', {
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            });
+            document.getElementById('date-time').innerText = formattedDateTime;
         }
 
-        function showMobileView() {
-            document.body.style.width = '375px';
-            document.body.style.height = '667px';
-            document.body.style.overflow = 'scroll';
-            document.body.style.backgroundColor = '#e0f7fa';
-            document.getElementById('status').innerText = 'スマホ表示中';
-        }
-
-        function takeScreenshot() {
-            alert('スクリーンショットボタンが押されました');
-        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
     </script>
 </body>
 </html>
-```
