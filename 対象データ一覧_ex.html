@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>対象データ一覧</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+    <!-- Header content (unchanged) -->
+
+    <!-- Search conditions (unchanged) -->
+
+    <!-- Bulk selection button -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <button id="bulkSelectBtn" class="btn btn-secondary">一括選択</button>
+        </div>
+    </div>
+
+    <!-- Search results -->
+    <div class="D3">
+        <!-- Header row (unchanged) -->
+
+        <!-- Dynamic sample data rows -->
+        <div id="dataRows"></div>
+
+        <!-- Pagination -->
+        <div class="paging">
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Control buttons (unchanged) -->
+</div>
+
+<script>
+    $(document).ready(function() {
+        // Generate sample data
+        const sampleData = [];
+        for (let i = 1; i <= 10; i++) {
+            sampleData.push({
+                id: `XXXXX${i}`,
+                orderNumber: `XX-XXXXX${i}`,
+                vehicle: `車両 ${200 + i} に ${12 + i}-${34 + i}`,
+                billingTo: `○×△株式会社 ${i}`,
+                installationTo: `○×△株式会社 ${i}`,
+                receivedDate: `2024/07/${17 + i}`,
+                shippedDate: `2024/08/${1 + i}`,
+                workContent: `法定${3 * i}ヶ月点検`,
+                signatureStatus: i % 3
+            });
+        }
+
+        // Render data rows
+        function renderDataRows(data) {
+            const rowsHtml = data.map(item => `
+                <div class="row border-top border-bottom">
+                    <div class="col-2 col-md-1 align-self-center">
+                        <div class="text-center"><input class="form-check-input row-checkbox" type="checkbox" value="${item.id}"></div>
+                    </div>
+                    <div class="col-9 col-md-11">
+                        <div class="row">
+                            <div class="col-6 col-md-1 colitem">${item.id}</div>
+                            <div class="col-6 col-md-1 colitem">${item.orderNumber}</div>
+                            <div class="col-12 col-md-1 colitem">${item.vehicle}</div>
+                            <div class="col-12 col-md-2">${item.billingTo}</div>
+                            <div class="col-12 col-md-2">${item.installationTo}</div>
+                            <div class="col-6 col-md-1 colitem">${item.receivedDate}</div>
+                            <div class="col-6 col-md-1 colitem">${item.shippedDate}</div>
+                            <div class="col-12 col-md-2">${item.workContent}</div>
+                            <div class="col-md-1 icon">
+                                ${getSignatureStatusIcon(item.signatureStatus)}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            $('#dataRows').html(rowsHtml);
+        }
+
+        function getSignatureStatusIcon(status) {
+            switch(status) {
+                case 1: return '<a href="#"><i class="bi-check-square">署名あり</i></a>';
+                case 2: return '<a href="#"><i class="bi-send-check">通知済み</i></a>';
+                default: return '&nbsp;';
+            }
+        }
+
+        // Initial render
+        renderDataRows(sampleData);
+
+        // Bulk selection functionality
+        let bulkSelectActive = false;
+        $('#bulkSelectBtn').click(function() {
+            bulkSelectActive = !bulkSelectActive;
+            $(this).toggleClass('btn-secondary btn-primary');
+            $(this).text(bulkSelectActive ? '選択解除' : '一括選択');
+            $('.row-checkbox').prop('checked', bulkSelectActive);
+        });
+
+        // Pagination functionality (mock-up)
+        $('.pagination .page-link').click(function(e) {
+            e.preventDefault();
+            $('.pagination .page-item').removeClass('active');
+            $(this).parent().addClass('active');
+            // Here you would typically fetch and render new data
+            // For this mock-up, we'll just re-render the same data
+            renderDataRows(sampleData);
+        });
+    });
+</script>
+</body>
+</html>
